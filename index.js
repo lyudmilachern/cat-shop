@@ -71,6 +71,7 @@ function render(cats) {
   });
 	const container = document.getElementById('catsList');
   container.innerHTML = resultHTML;
+  setupLikeButtons();
 }
 
 function generateCatCard(cat) {
@@ -105,6 +106,31 @@ function generateCatCard(cat) {
           </div>`;
 }
 
+function setupLikeButtons() {
+	document.querySelectorAll('.catCard').forEach(el => {
+    const likeButton = el.querySelector('.likeButton');
+    if (!likeButton) return;
+    const alreadyWishlisted = likeButton.classList.contains('liked');
+  	likeButton.addEventListener('click', () => {
+      updateCatRecord(catsData, el.dataset.id, { wishlisted: !alreadyWishlisted });
+      render(catsData);
+    	alert(`Cat with id ${el.dataset.id} was ${!alreadyWishlisted ? 'added to' : 'removed from'} favourites`);
+    })
+  });
+}
+
+function updateCatRecord(cats, id, data = {}) {
+  if (!Array.isArray(cats)) return;
+  let catIndex;
+  const cat = cats.find((cat, index) => {
+    if (cat.id == id) {
+      catIndex = index; 
+      return true;
+    }
+  });
+  cats.splice(catIndex, 1, { ...cat, ...data });
+  return cats;
+}
 
 
 function onStart() {
