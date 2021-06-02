@@ -1,0 +1,843 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  font-family: Montserrat;
+  background-color: #FFFFFF;
+}
+
+.mainContent {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gridParam {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;  
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 0px;
+}
+
+.avatarPosition {
+  position: relative;
+}
+
+.likeButton {
+  position: absolute;
+  top: 36px;
+  right: 32px;
+  border: none;
+  background:none;
+  opacity: 0.5;
+}
+
+.likeButton:hover {
+  cursor: pointer;
+}
+
+.likeButton:focus {
+  outline: none;
+}
+
+.liked {
+  opacity: 1;
+}
+
+.heart {
+  height: 40px;
+}
+
+.discount {
+  background-color: #E62D2D;
+  border-radius: 10px;
+  width: 78px;
+  height: 39px;
+  position: absolute;
+  top: 36px;
+  left: 32px;
+  font-size: 16;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.border {
+  border-left: 4px solid #6EBBD3;
+  padding-left: 10px;
+}
+
+.box {
+  margin: 22px;
+}
+
+.catCard {
+  width: 380px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  background-color: #F3F3F3;
+}
+
+.avatar {
+  width: 380px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+.name,
+.price {
+  padding: 0px;
+  margin: 10px;
+  margin-bottom: 22px;
+  margin-top: 22px;
+}
+
+h3 {
+  font-size: 16px;
+  padding: 2px;
+  margin: 0px;
+}
+
+.params {
+  font-size: 12px;
+  text-align: left;
+  width: 89px;
+  padding: 2px;
+  margin: 0px;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.toBuy {
+  background-color: #6EBBD3;
+  width: 380px;
+  height: 65px;
+  border-style: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.toBuy:hover {
+  cursor: pointer;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toBuy:focus {
+  outline: none;
+}
+
+.soldOut {
+  background-color: #1F2021;
+  width: 380px;
+  height: 65px;
+  border-style: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.soldOut:hover {
+  cursor: default;
+}
+
+header {
+  width: 100vw;
+  height: 252px;
+  color:#FFFFFF;
+  margin: 0 auto;
+  width: 100%;
+  background-image: linear-gradient(rgba(31, 32, 33, 0.79), 
+  rgba(31, 32, 33, 0.79)), url(/images/stephen-leonardi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+header .mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0%;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 90%;
+}
+
+.logo {
+  position: relative;
+  width: 80px;
+  height: 55px;
+}
+
+.logo1 {
+  position: absolute;
+  left: 19.16%;
+  right: 0%;
+  top: 17.75%;
+  bottom: 17.76%;
+  width: 80px;
+  height: 55px;
+}
+
+.logo2 {
+  position: absolute;
+  left: 0%;
+  right: 19.16%;
+  top: 17.75%;
+  bottom: 17.76%;
+  width: 80px;
+  height: 55px;
+}
+
+.found {
+  font-size: 38px;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 10px;
+}
+
+.telAlign{
+  text-align: right;
+}
+
+.telNumber{
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.callUs {
+  text-align: right;
+  font-size: 18px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  top: 65px;
+  left: 300px;
+}
+
+.menuTags {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  font-size: 18px;
+  font-weight: 400;
+  min-width: 115px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-family: Montserrat;
+  text-decoration: none;
+}
+
+.menuTags:hover {
+  cursor: pointer;
+}
+
+.menuTags:focus {
+  outline: none;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 18px;
+  font-weight: 700;
+  max-width: 470px;
+}
+
+.sortBy {
+  width: 160px;
+}
+
+.sortButtons {
+  border: none;
+  background:none;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 127px;
+}
+
+.sortByPrice {
+  max-width: 82px;
+}
+
+.more {
+  width: 380px;
+  height: 65px;
+  border: 1px solid #CACACA;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #FFFFFF;
+  font-family: Montserrat;
+  font-size: 14px;
+}
+
+.more:hover {
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.more:focus {
+  outline: none;
+}
+
+.moreWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 83px;
+  margin-top: 68px;
+}
+
+.toTop {
+  width: 59px;
+  height: 59px;
+  background-color: #6EBBD3;
+  position: fixed;
+  bottom: 50px;
+  right: 80px;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.toTop:hover {
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toTop::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 26px;
+  left: 22px;
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+  transform: rotate(45deg);
+}
+.toTop:focus {
+  outline: none;
+}
+
+footer {
+  height: 312px;
+  background-color: #1F2021;
+  color: #FFFFFF;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto;
+  margin-bottom: 85px;
+}
+
+.footerWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  width: 1180px;
+}
+
+.footerBox {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.subscriptionForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+  height: 110px;
+}
+
+.subscriptionForm .inputWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 560px;
+}
+
+.subscribe {
+  background-color: #6EBBD3;
+  color:#FFFFFF;
+  width: 250px;
+  height: 65px;
+  border-radius: 10px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+}
+
+.subscribe:hover {
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.subscribe:focus {
+  outline: none;
+}
+
+.emailInput {
+  width: 265px;
+  height: 65px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-family: Montserrat;
+  margin-right: 15px; 
+  padding-left: 35px;
+}
+
+.emailErrorMessage {
+  color: red;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.emailInput:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder {color:#000000;}
+::-moz-placeholder          {color:#000000;}/* Firefox 19+ */
+:-moz-placeholder           {color:#000000;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#000000;}
+
+.subscribeCheckboxWrap {
+  margin-top: 24px;
+  max-height: 20px;
+}
+
+.subscribeCheckboxWrap label {
+  font-size: 14px;
+  color: #FFFFFF;
+  font-family: Montserrat;
+
+}
+.subscribeNews {
+  padding-left: 40px;
+}
+
+h1 {
+  font-size: 48px;
+  padding: 0px;
+  padding-bottom: 20px;
+  margin: 0px;
+  line-height: 58,51px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 400;
+  padding: 0px;
+  margin: 0px;
+  line-height: 25,54px;
+}
+
+.containerCheck {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.containerCheck input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #FFFFFF;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: none;
+}
+
+.containerCheck input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.containerCheck input:checked ~ .checkmark {
+  background-color: #6EBBD3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.containerCheck input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.containerCheck .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 3px;
+  height: 7.5px;
+  border: solid #FFFFFF;
+  border-width: 0 2.9px 2.9px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px){
+  .catCard {
+    margin: 10px;
+  }
+
+  .grid {
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .headerContent{
+    margin-top: 20px;
+  }
+
+  .menu {
+    top: 120px;
+    left: 150px;
+  }
+
+  .menuTags {
+    max-width: 80px;
+  }
+
+  .found {
+    margin-top: 120px;
+    font-size: 30px;
+  }
+
+  .mainContent {
+    width: 80%;
+  }
+
+  footer {
+    width: 100%;
+    height: 382px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer p {
+    margin: 2px;
+  }
+  
+  .footerWrap {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;;
+    align-items: center;
+    padding-left: 5px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+    padding-right: 0px;
+    margin: 0px;
+  }
+    
+  .footerBox {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  
+  .subscriptionForm {
+    width: 100%;
+  }
+
+  .subscriptionForm .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+
+  .subscribe {
+    width: 100%;
+    height: 65px;
+    font-size: 14px;
+    margin: 0%;
+  }
+
+  .emailInput {
+    margin-bottom: 10px;
+    width: 95%;
+    padding-left: 5%;
+  }
+
+  .subscribeCheckboxWrap {
+    margin-top: 15px;
+    max-height: 20px;
+  }
+
+  .grid {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  h1 {
+    font-size: 40px;
+    padding-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0px;
+  }
+
+  .gridParam {
+    margin: 0%;
+  }
+  
+  h1 {
+    font-size: 28px;
+    padding-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+  
+  footer {
+    padding-bottom: 20px;
+  }
+  
+  .footerWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 5px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+    padding-right: 0px;
+    margin: 0px;
+  }
+    
+  .footerBox {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+  }
+  
+  .subscriptionForm {
+    max-height: 90px;
+  }
+  
+  .subscriptionForm .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .subscribe {
+    font-size: 14px;
+    margin: 0%;
+  }
+
+  .emailInput {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-family: Montserrat;
+    padding-left: 5%;
+    padding-right: 0%;
+    margin: 0%;
+    margin-bottom: 10px;
+  }
+
+  .subscribeCheckboxWrap {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .catCard {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #F3F3F3;
+  }
+
+  .avatar {
+    width: 100%;
+  }
+
+  .toBuy {
+    width: 100%;
+  }
+
+  .soldOut {
+    width: 100%;
+  }
+
+  .moreWrap {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .sort {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .sortBy {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+  
+  .sortButtons {
+    font-size: 16px;
+  }
+  
+  .found {
+    font-size: 26px;
+  }
+
+  .logo1,
+  .logo2 {
+    position: absolute;
+    top: 0px;
+    width: 80px;
+    height: 55px;
+  }
+  
+  .logo1 {
+    left: 14px;
+  }
+
+  .logo2 {
+    left: 0;
+  }
+
+  header .mainContent {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    padding: 10px;
+    margin: 0%;
+  }
+
+  .menu {
+    left: 30px;
+  }
+  
+  .menuTags{
+    min-width: 90px;
+  }
+
+  .telAlign{
+    text-align: right;
+  }
+  
+  .telNumber{
+    font-size: 20px;
+  }
+  
+  .toTop{
+    right: 50px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .menu {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    left: 10px;
+  }
+
+  .found {
+    font-size: 20px;
+  }
+}
