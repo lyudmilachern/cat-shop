@@ -169,6 +169,22 @@ function setUpSortButtons() {
     })
 }
 
+function setUpEmailValidation() {
+  const hiddenClassName = 'hidden';
+  const classList = document.querySelector('.emailErrorMessage').classList;
+
+  document.getElementById('email').addEventListener('input', event => {
+    const email = event.target.value;
+    if (!emailIsValid(email)) classList.remove(hiddenClassName);
+    if (emailIsValid(email)) classList.add(hiddenClassName);
+  });
+}
+
+function emailIsValid(email) {
+	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
 function setUpScrollToTop() {
   scrollToTopButton.addEventListener('click', () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -186,6 +202,7 @@ function toggleScrollToTopButtonVisibility() {
 
 function onStart() {
   setUpSortButtons();
+  setUpEmailValidation();
   setUpScrollToTop();
   toggleScrollToTopButtonVisibility();
 	render(catsData);
