@@ -1,3 +1,4 @@
+const scrollToTopButton = document.getElementById('scrollToTop');
 let catsData = [
 	{
   	id: 1,
@@ -132,8 +133,24 @@ function updateCatRecord(cats, id, data = {}) {
   return cats;
 }
 
+function setUpScrollToTop() {
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  })
+  window.onscroll = toggleScrollToTopButtonVisibility;
+}
+
+function toggleScrollToTopButtonVisibility() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopButton.style.display = "block";
+  } else {
+    scrollToTopButton.style.display = "none";
+  }
+}
 
 function onStart() {
+  setUpScrollToTop();
+  toggleScrollToTopButtonVisibility();
 	render(catsData);
 }
 document.addEventListener('DOMContentLoaded', onStart);
