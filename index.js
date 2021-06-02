@@ -133,6 +133,42 @@ function updateCatRecord(cats, id, data = {}) {
   return cats;
 }
 
+function sortBy(parameter, type) {
+  if (type === 'asc') {
+  	catsData = catsData.sort((a, b) => ascSorting(a, b, parameter));
+  	render(catsData);
+  }
+  if (type === 'desc') {
+  	catsData = catsData.sort((a, b) => descSorting(a, b, parameter));
+  	render(catsData);
+  }
+}
+
+function ascSorting(a, b, parameter) {
+	if (a[parameter] < b[parameter]) return -1;
+  if (a[parameter] > b[parameter]) return 1;
+  return 0;
+}
+
+function descSorting(a, b, parameter) {
+	if (a[parameter] > b[parameter]) return -1;
+  if (a[parameter] < b[parameter]) return 1;
+  return 0;
+}
+
+function setUpSortButtons() {
+  document
+    .querySelectorAll('.sortButtons')
+    .forEach(el => {
+      el.addEventListener('change', ({target}) => {
+        if (target.value === 'priceAsc') sortBy('price', 'asc');
+        if (target.value === 'priceDesc') sortBy('price', 'desc');
+        if (target.value === 'ageAsc') sortBy('age', 'asc');
+        if (target.value === 'ageDesc') sortBy('age', 'desc');
+      });
+    })
+}
+
 function setUpScrollToTop() {
   scrollToTopButton.addEventListener('click', () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -149,6 +185,7 @@ function toggleScrollToTopButtonVisibility() {
 }
 
 function onStart() {
+  setUpSortButtons();
   setUpScrollToTop();
   toggleScrollToTopButtonVisibility();
 	render(catsData);
