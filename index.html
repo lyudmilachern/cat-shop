@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="mainContent">
+      <div class="headerContent">
+        <div class="logo">
+          <img src="./images/Vector.svg" alt="" class="logo1">
+          <img src="./images/Vector (1).svg" alt="" class="logo2">
+        </div>
+        <div class="menu">
+          <a class="menuTags" href="#">Main</a>
+          <a class="menuTags" href="#">Gallery</a>
+          <a class="menuTags" href="#">News</a>
+          <a class="menuTags" href="#">Profile</a>
+        </div>
+        <div class="telAlign">
+          <a class="telNumber" href="tel:+544349000000">+544 3490 00000</a>
+          <p class="callUs">Звони скорее!</p>
+        </div>
+      </div>
+      <h1 class="found">Найдено 349 котов</h1>
+    </div>
+  </header>
+  <div class="mainContent">
+    <main>
+      <div class="sort">
+        <p class="sortBy">Сортировать по:</p>
+        <select class="sortButtons sortByPrice">
+          <option value="">Цене</option>
+          <option value="priceAsc">&#8593; Цена</option>
+          <option value="priceDesc">&#8595; Цена</option>
+        </select>
+        <select class="sortButtons">
+          <option value="">Возрасту</option>
+          <option value="ageAsc">&#8593; Возраст</option>
+          <option value="ageDesc">&#8595; Возраст</option>
+        </select>
+      </div>
+      <!--Cats---------------->
+      <div class="grid" id="catsList"></div>
+      <div class="moreWrap">
+        <button class="more">Показать еще 20</button>
+      </div>
+      <button class="toTop" id="scrollToTop"></button>
+    </main>
+    <footer>
+      <div class="footerWrap">
+        <div class="footerBox">
+          <h1>Успей купить!</h1>
+          <h2>Подпишись и успей словить все акции</h2>
+        </div>
+        <!--Email input------------>
+        <div class="subscriptionForm">
+          <p class="emailErrorMessage hidden">This is not a valid email</p>
+          <div class="inputWrapper">
+            <input type="email" class="emailInput"  id="email" name="email" placeholder="Email">
+            <button class="subscribe">Подписаться</button>
+          </div>
+          <!--Input ends------>
+          <div class="subscribeCheckboxWrap">
+            <label for="subscribeCheckbox" class="containerCheck">
+              <input type="checkbox" id="subscribeCheckbox"/>
+              <span class="checkmark"></span>
+              <span class="subscribeNews">Подписаться на новости</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="index.js"></script>
+</html>
